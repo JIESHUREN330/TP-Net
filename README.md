@@ -1,7 +1,7 @@
 # Reliable Multi-Prototypical Contrastive Learning for Semi-supervised Heterogeneous Medical Image Segmentation
 Jieshu Ren
 ![graphabstraction_v2](https://github.com/user-attachments/assets/1de368f0-393f-49a6-933a-bc3201ab2e54)
-# Experiment
+Experiment
 Comparison to SOTA Methods
 ![SPIDER_seg_result_table_v2](https://github.com/user-attachments/assets/712238fc-c3d1-49b3-9950-f37b34149da0)
 ![SPIDER_seg_resultv4(1)](https://github.com/user-attachments/assets/730e19b5-491b-4d19-afd7-9615771a78b4)
