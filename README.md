@@ -11,40 +11,46 @@
 ## Motivation
 ![graphabstraction_v2](Figures/graphabstraction_v2.png)
 <div align='center'>Fig 1. Graphical Abstract</div>
-
+<p> 
 Two major challenges in multi-organ segmentation:
 > - **Inter-class feature indistinctness**:The features of multiple organs with highly similar characteristics (e.g., texture, anatomical structures, contrast) remain challenging to distinguish, as illustrated in Fig.1(Challenge1). Additionally, the complexity of medical image backgrounds introduces substantial ambiguous pixels, particularly at organ boundaries and within low-contrast regions.
 > - **High multi-source sample heterogeneity**:The inherent multi-source heterogeneity in medical datasets, originating from multi-institutional and multi-scanner acquisition protocols, leads to low intra-class consistency within identical classes in the same dataset, as shown in Fig.1(Challenge2).
->
+
 
 Furthermore, due to the time-consuming and expensive manual contouring process when labeling medical images, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
 
 <video src="Figures/VID 20250505001043957.mp4" controls="controls" width="500" height="300"></video>
+
+<video width="320" height="240" controls>
+<source src="movie.mp4" type="Figures/VID 20250505001043957.mp4">
+</video>
+
+
 ## Experiment
 ### Comparison to SOTA Methods
 ![CT_seg _result_table](Figures/SPIDER_seg_result_table_v2.png)
 <div align='center'>Tab 1. Comparison between our method and existing methods on SPIDER dataset.</div>
->
+<p> 
 
 ![CT_seg _result_visual](Figures/SPIDER_seg_resultv4(1).png)
 <div align='center'>Fig 2. Qualitative results of different segmentation methods on SPIDER dataset.</div>
->
+<p> 
 
 ![CT_seg _result_table](Figures/CT_seg_result_table_v2.png)
 <div align='center'>Tab 2. Comparison between our method and existing methods on Abdomenct-1k dataset.</div>
->
+<p> 
 
 ![CT_seg _result_visual](Figures/CT_seg_resultv4(1).png)
 <div align='center'>Fig 3. Qualitative results of different segmentation methods on Abdomenct-1k dataset.</div>
->
+<p> 
 
 ![CT_seg _result_table](Figures/Knee_seg_result_table_v2.png)
 <div align='center'>Tab 3. Comparison between our method and existing methods on Knee dataset.</div>
->
+<p> 
 
 ![CT_seg _result_visual](Figures/Knee_seg_resultv4(1).png)
 <div align='center'>Fig 4. Qualitative results of different segmentation methods on Knee dataset.</div>
->
+<p> 
 
 ### Clinical Application
 <p>To further validate the effectiveness of our method in clinical applications, we independently developed a surgical navigation system for minimally invasive knee surgeries with arthroscopy, where the optimal model weights of our proposed TP-Net on the knee dataset were deployed for semantic segmentation of knee MRI scans. We can obtain a 3D reconstruction model based on the segmentation results from inference, which will be used for visualizing the knee joint model in this system, aiming to improve the success rate and safety of the surgery. Before showing the results of our clinical trials, we first introduce minimally invasive knee surgeries with arthroscopy. Minimally invasive knee surgery is a common treatment for knee joint injuries or related diseases, which aims to complete the treatment by arthroscopy with only small incisions. However, due to the limitation of view of the arthroscope, clinicians can not accurately observe the internal condition of the patient's knee joint, which can potentially lead to surgical failure. The surgical navigation system can effectively address this issue by using several algorithms to obtain an accurate visualization model of the patient's knee joint, and real-time tracking and positioning technology to reflect the joint's motion state in the visualization model.
