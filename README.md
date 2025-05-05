@@ -1,8 +1,23 @@
-# Reliable Multi-Prototypical Contrastive Learning for Semi-supervised Heterogeneous Medical Image Segmentation
-Jieshu Ren, Liang Yang, Hongyu Li, Yichao Wang, Dongpei Liu, Yi Wang, Zhihui Wang, and Bin Liu
-![graphabstraction_v2](Figures/graphabstraction_v2.png)
+# <div align='center'>Reliable Multi-Prototypical Contrastive Learning for Semi-supervised Heterogeneous Medical Image Segmentation</div>
+<p align="center">Jieshu Ren<sup>1,2</sup>, Liang Yang<sup>3</sup>, Hongyu Lin<sup>1,2</sup>, Yichao Wangn<sup>1,2</sup>, Dongpei Liu<sup>3</sup>, Yi Wang<sup>1</sup>, Zhihui WangYi Wang<sup>1</sup>, and Bin Liun<sup>1,2,*</sup></p>
+<p align="center">Dalian University of Technology, China<sup>1</sup><br>Cancer Hospital of Dalian University of Technology, China<sup>2</sup><br>The Second Hospital of Dalian Medical University, China<sup>3</sup></p>
+
 ## Abstract
+<p>Accurate multi-organ segmentation is pivotal for clinical decision-making in diagnosis. 
+<p>However, two fundamental challenges persist: (1)inter-class feature indistinctness, and (2) high multi-source sample heterogeneity, particularly under semi-supervised learning with limited annotations. 
+<p>In this paper, we propose TP-Net, a semi-supervised framework for multi-organ segmentation in heterogeneous medical images, which innovatively integrates reliable multi-prototype contrastive learning. Specifically, to mitigate prototype shift, we first devise an uncertainty-aware cross-domain alignment strategy grounded in the smoothness assumption, which constructs reliable prototypes by propagating reliable predictions distributions from labeled to unlabeled domains. This is synergized with contrastive separation, enforceing feature-proximity to class-matched prototypes in the embedding space. In order to further model the intricate distributions of multi-source samples, the heterogeneous prototype dynamic evolution mechanism with the multi-prototype embedding space is proposed. 
+<p>Experimental results on two public and one in-house datasets prove that the proposed method achieves a state-of-the-art performance. Further, clinical validation with  our self-developed surgical navigation system demonstrated the clinical viability of the proposed method.
+
 ## Motivation
+![graphabstraction_v2](Figures/graphabstraction_v2.png)
+<div align='center'>Fig 1. Graphical Abstract</div>
+
+Two major challenges in multi-organ segmentation:
+> - **Inter-class feature indistinctness**:The features of multiple organs with highly similar characteristics (e.g., texture, anatomical structures, contrast) remain challenging to distinguish, as illustrated in Fig.1(Challenge1). Additionally, the complexity of medical image backgrounds introduces substantial ambiguous pixels, particularly at organ boundaries and within low-contrast regions.
+> - **High multi-source sample heterogeneity**:The inherent multi-source heterogeneity in medical datasets, originating from multi-institutional and multi-scanner acquisition protocols, leads to low intra-class consistency within identical classes in the same dataset, as shown in Fig.1(Challenge2).
+>
+
+Furthermore, due to the time-consuming and expensive manual contouring process when labeling medical images, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
 ## Experiment
 ### Comparison to SOTA Methods
 ### Clinical Application
