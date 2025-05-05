@@ -17,7 +17,7 @@ Two major challenges in multi-organ segmentation:
 > - **High multi-source sample heterogeneity**:The inherent multi-source heterogeneity in medical datasets, originating from multi-institutional and multi-scanner acquisition protocols, leads to low intra-class consistency within identical classes in the same dataset, as shown in Fig.1(Challenge2).
 
 
-<p>Additionally, due to **the time-consuming and expensive manual contouring process when labeling medical images**, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
+Additionally, due to **the time-consuming and expensive manual contouring process when labeling medical images**, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
 <p>To deal with the two major challenges in multi-organ segmentation, we develop TP-Net, a semi-supervised framework leveraging reliable multi-prototype contrastive learning for heterogeneous medical images. Further, employing the TP-Net model, we independently developed a surgical navigation system with TP-Net for minimally invasive knee surgeries (including the software system and related surgical tools such as probes and positioning boards). Clinical trials with our self-developed surgical navigation system exhibit TP-Net's potential for implementation in clinical scenarios.
 
 https://github.com/user-attachments/assets/f1b00eb5-0e11-4ce2-ad98-9adcf8bdabd8
