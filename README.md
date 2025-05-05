@@ -19,13 +19,6 @@ Two major challenges in multi-organ segmentation:
 
 Furthermore, due to the time-consuming and expensive manual contouring process when labeling medical images, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
 
-<video src="Figures/VID 20250505001043957.mp4" controls="controls" width="500" height="300"></video>
-
-<video width="320" height="240" controls>
-<source src="movie.mp4" type="Figures/VID 20250505001043957.mp4">
-</video>
-
-
 ## Experiment
 ### Comparison to SOTA Methods
 ![CT_seg _result_table](Figures/SPIDER_seg_result_table_v2.png)
@@ -57,13 +50,17 @@ Furthermore, due to the time-consuming and expensive manual contouring process w
 <p>Hence, we independently developed a surgical navigation system for minimally invasive knee surgeries (including the software system and related surgical tools such as probes and positioning boards), which is supported by an optical positioning device, OP-M620 (provided by Guangzhou Aimooe Technology Co., Ltd.). We combined traditional semantic segmentation algorithms to obtain the patient's 3D bone model from CT images. Considering that there are no clear displays of soft tissues in CT images like cartilage, we deploy the optimal model weights of TP-Net into our system, which allows clinicians to input the patient's MRI scans and then obtain the 3D MRI visualization. We combined the soft tissue of the 3D MRI visualization with the 3D bone model to create a complete 3D visualization model for our system with RANSAC algorithm. Additionally, we designed a registration approach for minimally invasive knee surgeries with the OP-M620 and our self-developed tools (e.g., a probe and two positioning boards), which makes the connection between the visualization model and the patient's knee joint, allowing the patient's knee movement to be accurately and real-time reflected in the visualization model of our system.
 With the assistance of clinicians, we completed two clinical trials, performing minimally invasive knee surgeries on cadavers using our surgical navigation system at Dalian Medical University. As shown in Fig.\ref{fig:clinical_trial}, the results of clinical trials fully validate that our proposed TP-Net can be successfully applied in medical scenarios and effectively address clinical challenges.
   
-![clinical_app](Figures/clinical application_v4.png)
+![clinical_app](Figures/clinical_application_v4.png)
 <div align='center'>Fig 4. Clinical trial conducted at Dalian Medical University on December 15, 2024. The branches in the figure illustrate the details of our surgical navigation system for minimally invasive knee surgery, including our self-developed software system, our self-developed related surgical tools (e.g., two probes and two positioning boards), and the optical positioning device OP-M620. Note that this result was captured after the registration process was completed, and we deployed the optimal model weights of our proposed TP-Net on the knee dataset into the software system for semantic segmentation of knee MRI scans.</div>
 <p> 
   
 ## Discussion
 ![CT_seg _result_visual](Figures/parameta_contrast_v4.png)
 <div align='center'>Fig 4. Dice performance with different loss weights &lambda;<sub>T</sub> and &lambda;<sub>P</sub> using 5%, 10%, and 20% labeled data.</div>
+<p> 
+
+![CT_seg _result_visual](Figures/pesudo_label_v2.png)
+<div align='center'>Fig 4. Visualization of uncertainty map at different training stages on the Knee and Abdomenct-1k dataset with 5%, 10%, and 20% labeled data. The weight &mu;<sub>thresh</sub> is set to 2.</div>
 <p> 
 
 ## Acknowledgement
