@@ -1,7 +1,7 @@
 # Reliable Multi-Prototypical Contrastive Learning for Semi-supervised Heterogeneous Medical Image Segmentation
 Jieshu Ren
 ![graphabstraction_v2](Figures/graphabstraction_v2.png)
-#Experiment
+##Experiment
 Comparison to SOTA Methods
 Clinical Application
 To further validate the effectiveness of our method in clinical applications, we independently developed a surgical navigation system for minimally invasive knee surgeries with arthroscopy, where the optimal model weights of our proposed TP-Net on the knee dataset were deployed for semantic segmentation of knee MRI scans. We can obtain a 3D reconstruction model based on the segmentation results from inference, which will be used for visualizing the knee joint model in this system, aiming to improve the success rate and safety of the surgery. Before showing the results of our clinical trials, we first introduce minimally invasive knee surgeries with arthroscopy. Minimally invasive knee surgery is a common treatment for knee joint injuries or related diseases, which aims to complete the treatment by arthroscopy with only small incisions. However, due to the limitation of view of the arthroscope, clinicians can not accurately observe the internal condition of the patient's knee joint, which can potentially lead to surgical failure. The surgical navigation system can effectively address this issue by using several algorithms to obtain an accurate visualization model of the patient's knee joint, and real-time tracking and positioning technology to reflect the joint's motion state in the visualization model.
