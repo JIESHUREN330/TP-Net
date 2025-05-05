@@ -18,8 +18,34 @@ Two major challenges in multi-organ segmentation:
 >
 
 Furthermore, due to the time-consuming and expensive manual contouring process when labeling medical images, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
+
+<video src="Figures/VID 20250505001043957.mp4" controls="controls" width="500" height="300"></video>
 ## Experiment
 ### Comparison to SOTA Methods
+![CT_seg _result_table](Figures/SPIDER_seg_result_table_v2.png)
+<div align='center'>Tab 1. Comparison between our method and existing methods on SPIDER dataset.</div>
+>
+
+![CT_seg _result_visual](Figures/SPIDER_seg_resultv4(1).png)
+<div align='center'>Fig 2. Qualitative results of different segmentation methods on SPIDER dataset.</div>
+>
+
+![CT_seg _result_table](Figures/CT_seg_result_table_v2.png)
+<div align='center'>Tab 2. Comparison between our method and existing methods on Abdomenct-1k dataset.</div>
+>
+
+![CT_seg _result_visual](Figures/CT_seg_resultv4(1).png)
+<div align='center'>Fig 3. Qualitative results of different segmentation methods on Abdomenct-1k dataset.</div>
+>
+
+![CT_seg _result_table](Figures/Knee_seg_result_table_v2.png)
+<div align='center'>Tab 3. Comparison between our method and existing methods on Knee dataset.</div>
+>
+
+![CT_seg _result_visual](Figures/Knee_seg_resultv4(1).png)
+<div align='center'>Fig 4. Qualitative results of different segmentation methods on Knee dataset.</div>
+>
+
 ### Clinical Application
 <p>To further validate the effectiveness of our method in clinical applications, we independently developed a surgical navigation system for minimally invasive knee surgeries with arthroscopy, where the optimal model weights of our proposed TP-Net on the knee dataset were deployed for semantic segmentation of knee MRI scans. We can obtain a 3D reconstruction model based on the segmentation results from inference, which will be used for visualizing the knee joint model in this system, aiming to improve the success rate and safety of the surgery. Before showing the results of our clinical trials, we first introduce minimally invasive knee surgeries with arthroscopy. Minimally invasive knee surgery is a common treatment for knee joint injuries or related diseases, which aims to complete the treatment by arthroscopy with only small incisions. However, due to the limitation of view of the arthroscope, clinicians can not accurately observe the internal condition of the patient's knee joint, which can potentially lead to surgical failure. The surgical navigation system can effectively address this issue by using several algorithms to obtain an accurate visualization model of the patient's knee joint, and real-time tracking and positioning technology to reflect the joint's motion state in the visualization model.
 <p>Hence, we independently developed a surgical navigation system for minimally invasive knee surgeries (including the software system and related surgical tools such as probes and positioning boards), which is supported by an optical positioning device, OP-M620 (provided by Guangzhou Aimooe Technology Co., Ltd.). We combined traditional semantic segmentation algorithms to obtain the patient's 3D bone model from CT images. Considering that there are no clear displays of soft tissues in CT images like cartilage, we deploy the optimal model weights of TP-Net into our system, which allows clinicians to input the patient's MRI scans and then obtain the 3D MRI visualization. We combined the soft tissue of the 3D MRI visualization with the 3D bone model to create a complete 3D visualization model for our system with RANSAC algorithm. Additionally, we designed a registration approach for minimally invasive knee surgeries with the OP-M620 and our self-developed tools (e.g., a probe and two positioning boards), which makes the connection between the visualization model and the patient's knee joint, allowing the patient's knee movement to be accurately and real-time reflected in the visualization model of our system.
