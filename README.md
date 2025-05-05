@@ -12,15 +12,21 @@
 ![graphabstraction_v2](Figures/graphabstraction_v2.png)
 <div align='center'>Fig 1. Graphical Abstract</div>
 <p> 
+
 Two major challenges in multi-organ segmentation:
 > - **Inter-class feature indistinctness**:The features of multiple organs with highly similar characteristics (e.g., texture, anatomical structures, contrast) remain challenging to distinguish, as illustrated in Fig.1(Challenge1). Additionally, the complexity of medical image backgrounds introduces substantial ambiguous pixels, particularly at organ boundaries and within low-contrast regions.
 > - **High multi-source sample heterogeneity**:The inherent multi-source heterogeneity in medical datasets, originating from multi-institutional and multi-scanner acquisition protocols, leads to low intra-class consistency within identical classes in the same dataset, as shown in Fig.1(Challenge2).
 
 
-Furthermore, due to the time-consuming and expensive manual contouring process when labeling medical images, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
+Furthermore, due to **the time-consuming and expensive manual contouring process when labeling medical images**, many attempts have been made towards semi-supervised learning (SSL), particularly through pseudo-label refinement strategies. 
+
+https://github.com/user-attachments/assets/f1b00eb5-0e11-4ce2-ad98-9adcf8bdabd8
+
 
 ## Experiment
 ### Comparison to SOTA Methods
+<p>We compare the segmentation performance on the three datasets of the proposed TP-Net and state-of-the-art methods in SSL, including BCP, ICT, DCNet, MC-Net, MC-Net+, SLC-Net, UA-MT, URPC and SS-Net. Moreover, these methods were also compared with simply using the annotated images for supervised learning (e.g., 5%, 10%, 20%, and 100% labeled data), which is denoted as supervised learning and serves as a baseline.
+
 ![CT_seg _result_table](Figures/SPIDER_seg_result_table_v2.png)
 <div align='center'>Tab 1. Comparison between our method and existing methods on SPIDER dataset.</div>
 <p> 
