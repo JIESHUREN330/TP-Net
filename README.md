@@ -1,5 +1,5 @@
 # <div align='center'>Reliable Multi-Prototypical Contrastive Learning for Semi-supervised Heterogeneous Medical Image Segmentation</div>
-<p align="center">Jieshu Ren<sup>1,2</sup>, Liang Yang<sup>3</sup>, Hongyu Lin<sup>1,2</sup>, Yichao Wangn<sup>1,2</sup>, Dongpei Liu<sup>3</sup>, Yi Wang<sup>1</sup>, Zhihui WangYi Wang<sup>1</sup>, and Bin Liun<sup>1,2,*</sup></p>
+<p align="center">Jieshu Ren<sup>1,2</sup>, Liang Yang<sup>3</sup>, Hongyu Lin<sup>1,2</sup>, Yichao Wangn<sup>1,2</sup>, Dongpei Liu<sup>3</sup>, Yi Wang<sup>1</sup>, Zhihui Wang<sup>1</sup>, and Bin Liun<sup>1,2,*</sup></p>
 <p align="center">Dalian University of Technology, China<sup>1</sup><br>Cancer Hospital of Dalian University of Technology, China<sup>2</sup><br>The Second Hospital of Dalian Medical University, China<sup>3</sup></p>
 
 ## Abstract
