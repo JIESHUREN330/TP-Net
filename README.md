@@ -3,7 +3,7 @@
 <p align="center">Dalian University of Technology, China<sup>1</sup><br>Cancer Hospital of Dalian University of Technology, China<sup>2</sup><br>The Second Hospital of Dalian Medical University, China<sup>3</sup></p>
 
 ## Abstract
-<p>Accurate multi-organ segmentation is pivotal for clinical decision-making in diagnosis. However, two fundamental challenges persist: (1)inter-class feature indistinctness, and (2) high multi-source sample heterogeneity. Compounding these issues, the endemic scarcity of expert-annotated medical imaging datasets further constrains model performance.
+<p>Accurate multi-organ segmentation is pivotal for clinical decision-making in diagnosis. However, two fundamental challenges persist: (1) inter-class feature ambiguity, and (2) high multi-source sample heterogeneity. Compounding these issues, the endemic scarcity of expert-annotated medical imaging datasets further constrains model performance.
 <p>In this paper, we propose TP-Net, a semi-supervised framework for multi-organ segmentation in heterogeneous medical images, which innovatively integrates reliable multi-prototype contrastive learning. Specifically, to mitigate prototype shift, we first devise an uncertainty-aware cross-domain alignment strategy grounded in the smoothness assumption, which constructs reliable prototypes by propagating reliable pixel prediction distributions from labeled to unlabeled domains. This is synergized with contrastive separation, enforcing feature proximity to class-matched prototypes in the embedding space. In order to further model the intricate distributions of multi-source samples, the graph-driven prototype dynamic evolution mechanism with the multi-prototype embedding space is proposed. 
 <p>Experimental results on two public datasets and one in-house dataset prove that the proposed method achieves state-of-the-art performance. Further, employing the TP-Net model, we independently developed a surgical navigation system with TP-Net for minimally invasive knee surgeries. The clinical validation with this system demonstrated the clinical viability of the proposed method.
 
@@ -13,7 +13,7 @@
 <p> 
 
 Two major challenges in multi-organ segmentation:
-> - **Inter-class feature indistinctness**:The features of multiple organs with highly similar characteristics (e.g., texture, anatomical structures, contrast) remain challenging to distinguish, as illustrated in Fig.1(Challenge1). Additionally, the complexity of medical image backgrounds introduces substantial ambiguous pixels, particularly at organ boundaries and within low-contrast regions.
+> - **Inter-class feature ambiguity**:The features of multiple organs with highly similar characteristics (e.g., texture, anatomical structures, contrast) remain challenging to distinguish, as illustrated in Fig.1(Challenge1). Additionally, the complexity of medical image backgrounds introduces substantial ambiguous pixels, particularly at organ boundaries and within low-contrast regions.
 > - **High multi-source sample heterogeneity**:The inherent multi-source heterogeneity in medical datasets, originating from multi-institutional and multi-scanner acquisition protocols, leads to low intra-class consistency within identical classes in the same dataset, as shown in Fig.1(Challenge2).
 
 
